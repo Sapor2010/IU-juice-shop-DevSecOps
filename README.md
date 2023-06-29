@@ -24,7 +24,7 @@ The pipelines will be configure with Github Actions and Azure
 
 [Steve Ackermann ](https://github.com/Sapor2010) aka `Sapor2010`
 
-DevSecOps Branch
+DevOps Branch
 
 
 ## What is Juice Shop ?
