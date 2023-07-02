@@ -119,7 +119,7 @@ jobs:
             sed -i s/SF:/SF:frontend\\//g frontend-lcov.info
             ./cc-test-reporter format-coverage -t lcov -o codeclimate.frontend.json frontend-lcov.info
             ./cc-test-reporter format-coverage -t lcov -o codeclimate.server.json server-lcov.info
-            ./cc-test-reporter sum-coverage codeclimate.*.json -p 3
+            ./cc-test-reporter sum-coverage codeclimate.*.json -p 2
             ./cc-test-reporter upload-coverage
           shell: bash 
 
