@@ -106,10 +106,10 @@ jobs:
           uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 #v3: v3.0.0 available
           with:
             name: unit-test-lcov
-        - name: "Download API test coverage data"
-          uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 #v3: v3.0.0 available
-          with:
-            name: api-test-lcov
+        #- name: "Download API test coverage data"
+         # uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 #v3: v3.0.0 available
+          #with:
+            #name: api-test-lcov
         - name: "Publish coverage to Codeclimate"
           env:
             CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
@@ -119,7 +119,6 @@ jobs:
             sed -i s/SF:/SF:frontend\\//g frontend-lcov.info
             ./cc-test-reporter format-coverage -t lcov -o codeclimate.frontend.json frontend-lcov.info
             ./cc-test-reporter format-coverage -t lcov -o codeclimate.server.json server-lcov.info
-            ./cc-test-reporter format-coverage -t lcov -o codeclimate.api.json api-lcov.info
             ./cc-test-reporter sum-coverage codeclimate.*.json -p 3
             ./cc-test-reporter upload-coverage
           shell: bash 
