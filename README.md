@@ -46,14 +46,7 @@ For a detailed introduction, full list of features and architecture overview ple
     - [From Sources](#from-sources)
     - [Packaged Distributions](#packaged-distributions)
     - [Docker Container](#docker-container)
-    - [Azure Container Instance](#azure-container-instance)
-    - [Google Compute Engine Instance](#google-compute-engine-instance)
 - [Demo](#demo)
-- [Documentation](#documentation)
-    - [Node.js version compatibility](#nodejs-version-compatibility)
-    - [Troubleshooting](#troubleshooting)
-    - [Official companion guide](#official-companion-guide)
-- [Contributors](#contributors)
 - [Licensing](#licensing)
 
 ## Setup
@@ -119,26 +112,6 @@ For a detailed introduction, full list of features and architecture overview ple
    running `az container create --resource-group <group name> --name <container name> --image bkimminich/juice-shop --dns-name-label <dns name label> --ports 3000 --ip-address public`
 4. Your container will be available at `http://<dns name label>.<location name>.azurecontainer.io:3000`
 
-### Google Compute Engine Instance
-
-1. Login to the Google Cloud Console and
-   [open Cloud Shell](https://console.cloud.google.com/home/dashboard?cloudshell=true).
-2. Launch a new GCE instance based on the juice-shop container. Take note of the `EXTERNAL_IP` provided in the output.
-
-```
-gcloud compute instances create-with-container owasp-juice-shop-app --container-image bkimminich/juice-shop
-```
-
-3. Create a firewall rule that allows inbound traffic to port 3000
-
-```
-gcloud compute firewall-rules create juice-rule --allow tcp:3000
-```
-
-4. Your container is now running and available at
-   `http://<EXTERNAL_IP>:3000/`
-
-
 
 ## Demo
 
@@ -148,55 +121,6 @@ Feel free to have a look at the latest version of OWASP Juice Shop:
 > This is a deployment-test and sneak-peek instance only! You are __not
 > supposed__ to use this instance for your own hacking endeavours! No
 > guaranteed uptime! Guaranteed stern looks if you break it!
-
-## Documentation
-
-### Node.js version compatibility
-
-![GitHub package.json dynamic](https://img.shields.io/github/package-json/cpu/bkimminich/juice-shop)
-![GitHub package.json dynamic](https://img.shields.io/github/package-json/os/bkimminich/juice-shop)
-
-OWASP Juice Shop officially supports the following versions of
-[node.js](http://nodejs.org) in line with the official
-[node.js LTS schedule](https://github.com/nodejs/LTS) as close as possible. Docker images and packaged distributions are
-offered accordingly.
-
-| node.js | Supported            | Tested             | [Packaged Distributions](#packaged-distributions) | [Docker images](#docker-container) from `master` | [Docker images](#docker-container) from `develop` |
-|:--------|:---------------------|:-------------------|:--------------------------------------------------|:-------------------------------------------------|:--------------------------------------------------|
-| 20.x    | :x:                  | :x:                |                                                   |                                                  |                                                   |
-| 19.x    | (:heavy_check_mark:) | :heavy_check_mark: |                                                   |                                                  |                                                   |
-| 18.x    | :heavy_check_mark:   | :heavy_check_mark: | Windows (`x64`), MacOS (`x64`), Linux (`x64`)     | `latest` (`linux/amd64`, `linux/arm64`)          | `snapshot` (`linux/amd64`, `linux/arm64`)         |
-| 17.x    | (:heavy_check_mark:) | :x:                |                                                   |                                                  |                                                   |
-| 16.x    | :heavy_check_mark:   | :heavy_check_mark: | Windows (`x64`), MacOS (`x64`), Linux (`x64`)     |                                                  |                                                   |
-| <16.x   | :x:                  | :x:                |                                                   |                                                  |                                                   |
-
-Juice Shop is automatically tested _only on the latest `.x` minor version_ of each node.js version mentioned above!
-There is no guarantee that older minor node.js releases will always work with Juice Shop!
-Please make sure you stay up to date with your chosen version.
-
-### Troubleshooting
-
-[![Gitter](http://img.shields.io/badge/gitter-join%20chat-1dce73.svg)](https://gitter.im/bkimminich/juice-shop)
-
-If you need help with the application setup please check our
-[our existing _Troubleshooting_](https://pwning.owasp-juice.shop/appendix/troubleshooting.html)
-guide. If this does not solve your issue please post your specific problem or question in the
-[Gitter Chat](https://gitter.im/bkimminich/juice-shop) where community members can best try to help you.
-
-:stop_sign: **Please avoid opening GitHub issues for support requests or questions!**
-
-## Contributing
-
-[![GitHub contributors](https://img.shields.io/github/contributors/bkimminich/juice-shop.svg)](https://github.com/bkimminich/juice-shop/graphs/contributors)
-[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![Crowdin](https://d322cqt584bo4o.cloudfront.net/owasp-juice-shop/localized.svg)](https://crowdin.com/project/owasp-juice-shop)
-![GitHub issues by-label](https://img.shields.io/github/issues/bkimminich/juice-shop/help%20wanted.svg)
-![GitHub issues by-label](https://img.shields.io/github/issues/bkimminich/juice-shop/good%20first%20issue.svg)
-
-We are always happy to get new contributors on board! Please check
-[CONTRIBUTING.md](CONTRIBUTING.md) to learn how to
-[contribute to our codebase](CONTRIBUTING.md#code-contributions) or the
-[translation into different languages](CONTRIBUTING.md#i18n-contributions)!
 
 ## References
 
