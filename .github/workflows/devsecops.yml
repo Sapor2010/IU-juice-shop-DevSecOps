@@ -1,0 +1,206 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build, test and deploy Node.js app to Azure Web App - AS-DevSecOps
+
+on:
+  push:
+    branches:
+      - DevOps
+    paths-ignore:
+      - '*.md'
+      - 'LICENSE'
+      - 'monitoring/grafana-dashboard.json'
+      - 'screenshots/**'
+  workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_NAME: AS-DevSecOps   # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: .      # set this to the path to your web app project, defaults to the repository root
+  NODE_VERSION: '18.x'                # set this to the node version to use
+  ANGULAR_CLI_VERSION: 13
+    
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: "Install CLI tools"
+        run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
+      - name: npm install, build, and test
+        run: |
+          npm install --ignore-scripts
+          cd frontend
+          npm install --ignore-scripts --legacy-peer-deps
+      - name: "Lint source code"
+        run: npm run lint
+      - name: "Lint customization configs"
+        run: >
+          npm run lint:config -- -f ./config/7ms.yml &&
+          npm run lint:config -- -f ./config/addo.yml &&
+          npm run lint:config -- -f ./config/bodgeit.yml &&
+          npm run lint:config -- -f ./config/ctf.yml &&
+          npm run lint:config -- -f ./config/default.yml &&
+          npm run lint:config -- -f ./config/fbctf.yml &&
+          npm run lint:config -- -f ./config/juicebox.yml &&
+          npm run lint:config -- -f ./config/mozilla.yml &&
+          npm run lint:config -- -f ./config/oss.yml &&
+          npm run lint:config -- -f ./config/quiet.yml &&
+          npm run lint:config -- -f ./config/tutorial.yml &&
+          npm run lint:config -- -f ./config/unsafe.yml
+
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node-version: [16, 18]
+    steps:
+      - name: "Check out Git repository"
+        if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' || github.repository != 'Sapor2010/IU-juice-shop-DevSecOps' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+      - name: "Use Node.js ${{ matrix.node-version }}"
+        if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' || github.repository != 'Sapor2010/IU-juice-shop-DevSecOps' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: "Install CLI tools"
+        if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' || github.repository != 'Sapor2010/IU-juice-shop-DevSecOps' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
+      - name: "Install application"
+        if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' || github.repository != 'Sapor2010/IU-juice-shop-DevSecOps' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        run: npm install
+      - name: "Execute unit tests"
+        if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' || github.repository != 'Sapor2010/IU-juice-shop-DevSecOps' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        uses: nick-invision/retry@45ba062d357edb3b29c4a94b456b188716f61020 #v2: 2.4.1 available
+        with:
+          timeout_minutes: 15
+          max_attempts: 3
+          command: npm test
+      - name: "Copy unit test coverage data"
+        run: |
+          cp build/reports/coverage/frontend-tests/lcov.info frontend-lcov.info
+          cp build/reports/coverage/server-tests/lcov.info server-lcov.info
+      - name: "Upload unit test coverage data"
+        if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' && github.event_name == 'push' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        uses: actions/upload-artifact@6673cd052c4cd6fcf4b4e6e60ea986c889389535 #v3: v3.0.0 available
+        with:
+          name: unit-test-lcov
+          path: |
+            frontend-lcov.info
+            server-lcov.info
+
+  coverage-report:
+      needs: [test]
+      runs-on: ubuntu-latest
+      if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' && github.event_name == 'push'
+      steps:
+        - name: "Check out Git repository"
+          uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        - name: "Download unit test coverage data"
+          uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 #v3: v3.0.0 available
+          with:
+            name: unit-test-lcov
+        #- name: "Download API test coverage data"
+         # uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 #v3: v3.0.0 available
+          #with:
+            #name: api-test-lcov
+        - name: "Publish coverage to Codeclimate"
+          env:
+            CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          run: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+            sed -i s/SF:/SF:frontend\\//g frontend-lcov.info
+            ./cc-test-reporter format-coverage -t lcov -o codeclimate.frontend.json frontend-lcov.info
+            ./cc-test-reporter format-coverage -t lcov -o codeclimate.server.json server-lcov.info
+            ./cc-test-reporter sum-coverage codeclimate.*.json -p 2
+            ./cc-test-reporter upload-coverage
+          shell: bash 
+  
+  analysis:
+    needs: [test]
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Analyze with SonarCloud SAST
+          uses: SonarSource/sonarcloud-github-action@de2e56b42aa84d0b1c5b622644ac17e505c9a049
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          with:
+            args:
+              -Dsonar.projectKey=Sapor2010_IU-juice-shop-DevSecOps
+              -Dsonar.organization=Steve
+              -Dsonar.typescript.tsconfigPaths=./,frontend/*
+              -Dsonar.tests=./test
+              -Dsonar.javascript.exclusions=""
+
+
+  build:
+    runs-on: ${{ matrix.os }}
+    needs: [coverage-report, analysis]
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [18]
+    steps:
+      - name: "Check out Git repository"
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+      - name: "Use Node.js ${{ matrix.node-version }}"
+        uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: "Install CLI tools"
+        run: |
+          npm install -g @angular/cli
+          npm install -g grunt-cli
+      - name: "Set packaging options for Grunt"
+        run: |
+          if [ "$RUNNER_OS" == "Windows" ]; then
+          echo "PCKG_OS_NAME=win32" >> $GITHUB_ENV
+          elif [ "$RUNNER_OS" == "macOS" ]; then
+          echo "PCKG_OS_NAME=darwin" >> $GITHUB_ENV
+          else
+          echo "PCKG_OS_NAME=linux" >> $GITHUB_ENV
+          fi
+          echo "PCKG_CPU_ARCH=x64" >> $GITHUB_ENV
+          echo "PCKG_NODE_VERSION=${{ matrix.node-version }}" >> $GITHUB_ENV
+        shell: bash
+      - name: "Package application"
+        run: |
+          npm install --production
+          npm install -g grunt-cli
+          npm run package:ci
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          name: node-app
+          path: .
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: node-app
+
+      - name: 'Deploy to Azure Web App'
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_DevSecOps }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
