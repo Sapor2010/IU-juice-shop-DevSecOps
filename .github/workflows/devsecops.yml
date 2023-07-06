@@ -138,6 +138,7 @@ jobs:
               -Dsonar.projectKey=Sapor2010_IU-juice-shop-DevSecOps
               -Dsonar.organization=isef-quiz
               -Dsonar.typescript.tsconfigPaths=frontend/*
+              -Dsonar.javascript.lcov.reportPaths=*.info
 
 
   build:
@@ -210,11 +211,11 @@ jobs:
     name: Scan Juice Shop preview instance on Heroku
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        uses: actions/checkout@v2 #v2: v2.3.4 available
         with:
-          ref: develop
+          ref: main
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.3.0
+        uses: zaproxy/action-baseline@v0.8.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: 'https://as-devsecops.azurewebsites.net'
