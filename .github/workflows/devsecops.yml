@@ -18,7 +18,7 @@ env:
   AZURE_WEBAPP_NAME: AS-DevSecOps   # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: .      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '18.x'                # set this to the node version to use
-  ANGULAR_CLI_VERSION: 14
+  ANGULAR_CLI_VERSION: 13
     
 
 jobs:
@@ -74,7 +74,7 @@ jobs:
         run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "Install application"
         if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' || github.repository != 'Sapor2010/IU-juice-shop-DevSecOps' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
-        run: npm install
+        run: npm install --ignore-scripts
       - name: "Execute unit tests"
         if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' || github.repository != 'Sapor2010/IU-juice-shop-DevSecOps' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
         uses: nick-invision/retry@45ba062d357edb3b29c4a94b456b188716f61020 #v2: 2.4.1 available
