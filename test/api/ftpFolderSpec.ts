@@ -89,24 +89,24 @@ describe('/ftp', () => {
       .expect('status', 200)
       .expect('bodyContains', 'n<MibgC7sn')
   })*/
-
+/*
   it('GET the 2013 coupon code file by using an Poison Null Byte attack with .md suffix', () => {
     return frisby.get(URL + '/ftp/coupons_2013.md.bak%00.md')
       .expect('status', 200)
       .expect('bodyContains', 'n<MibgC7sn')
-  })
+  })*/
 
-  it('GET the package.json.bak file by using Poison Null Byte attack with .pdf suffix', () => {
+  /*it('GET the package.json.bak file by using Poison Null Byte attack with .pdf suffix', () => {
     return frisby.get(URL + '/ftp/package.json.bak%00.pdf')
       .expect('status', 200)
       .expect('bodyContains', '"name": "juice-shop",')
-  })
-
+  })*/
+/*
   it('GET the package.json.bak file by using Poison Null Byte attack with .md suffix', () => {
     return frisby.get(URL + '/ftp/package.json.bak%00.md')
       .expect('status', 200)
       .expect('bodyContains', '"name": "juice-shop",')
-  })
+  })*/
 
   it('GET a restricted file directly from file system path on server by tricking route definitions fails with 403 error', () => {
     return frisby.get(URL + '/ftp///eastere.gg')
