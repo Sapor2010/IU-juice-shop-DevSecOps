@@ -18,7 +18,7 @@ env:
   AZURE_WEBAPP_NAME: AS-DevSecOps   # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: .      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '18.x'                # set this to the node version to use
-  ANGULAR_CLI_VERSION: 13
+  ANGULAR_CLI_VERSION: 14
     
 
 jobs:
