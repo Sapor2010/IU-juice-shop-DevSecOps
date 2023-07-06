@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build, test and deploy Node.js app to Azure Web App - AS-DevSecOps
+name: DevSecOps - Build, test and deploy Node.js app to Azure Web App - AS-DevSecOps
 
 on:
   push:
@@ -138,7 +138,6 @@ jobs:
               -Dsonar.projectKey=Sapor2010_IU-juice-shop-DevSecOps
               -Dsonar.organization=Steve
               -Dsonar.typescript.tsconfigPaths=frontend/*
-              -Dsonar.tests=test/*
               -Dsonar.javascript.exclusions=""
 
 
