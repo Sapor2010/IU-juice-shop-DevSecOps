@@ -6,7 +6,7 @@ name: DevSecOps - Build, test and deploy Node.js app to Azure Web App - AS-DevSe
 on:
   push:
     branches:
-      - DevOps
+      - DevSecOps
     paths-ignore:
       - '*.md'
       - 'LICENSE'
@@ -202,3 +202,21 @@ jobs:
           slot-name: 'production'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_DevSecOps }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+
+
+  zap_scan:
+    runs-on: ubuntu-latest
+    needs: deploy
+    name: Scan Juice Shop preview instance on Heroku
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        with:
+          ref: develop
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.3.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target: 'https://as-devsecops.azurewebsites.net'
+          rules_file_name: '.zap/rules.tsv'
+          cmd_options: '-a -j'
