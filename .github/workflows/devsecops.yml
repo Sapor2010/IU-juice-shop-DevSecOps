@@ -136,7 +136,7 @@ jobs:
           with:
             args:
               -Dsonar.projectKey=Sapor2010_IU-juice-shop-DevSecOps
-              -Dsonar.organization=Steve
+              -Dsonar.organization=isef-quiz
               -Dsonar.typescript.tsconfigPaths=frontend/*
               -Dsonar.javascript.exclusions=""
 
