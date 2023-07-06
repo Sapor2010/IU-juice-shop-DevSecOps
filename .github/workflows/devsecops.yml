@@ -128,6 +128,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+        - name: "Check out Git repository SAST"
+          uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+        - name: "Download unit test coverage data for Sonarqube"
+          uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 #v3: v3.0.0 available
+          with:
+            name: unit-test-lcov
         - name: Analyze with SonarCloud SAST
           uses: SonarSource/sonarcloud-github-action@de2e56b42aa84d0b1c5b622644ac17e505c9a049
           env:
