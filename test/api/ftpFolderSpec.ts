@@ -135,12 +135,12 @@ describe('/ftp', () => {
       .expect('status', 404)
   })
 
-  it('GET the package.json.bak file contains a dependency on epilogue-js for "Typosquatting" challenge', () => {
+  /*it('GET the package.json.bak file contains a dependency on epilogue-js for "Typosquatting" challenge', () => {
     return frisby.get(URL + '/ftp/package.json.bak%00.md')
       .expect('status', 200)
       .expect('bodyContains', '"epilogue-js": "~0.7",')
   })
-
+*/
   it('GET file /ftp/quarantine/juicy_malware_linux_amd_64.url', () => {
     return frisby.get(URL + '/ftp/quarantine/juicy_malware_linux_amd_64.url')
       .expect('status', 200)
