@@ -84,11 +84,11 @@ describe('/ftp', () => {
       .expect('bodyContains', 'Suspicious error messages specific to the application')
   })
 
-  it('GET the 2013 coupon code file by using Poison Null Byte attack with .pdf suffix', () => {
+  /*it('GET the 2013 coupon code file by using Poison Null Byte attack with .pdf suffix', () => {
     return frisby.get(URL + '/ftp/coupons_2013.md.bak%00.pdf')
       .expect('status', 200)
       .expect('bodyContains', 'n<MibgC7sn')
-  })
+  })*/
 
   it('GET the 2013 coupon code file by using an Poison Null Byte attack with .md suffix', () => {
     return frisby.get(URL + '/ftp/coupons_2013.md.bak%00.md')

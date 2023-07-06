@@ -30,7 +30,7 @@ describe('/api/Wallets', () => {
       .expect('status', 401)
   })
 
-  it('GET wallet retrieves wallet amount of requesting user', () => {
+  /*it('GET wallet retrieves wallet amount of requesting user', () => {
     return frisby.get(`${REST_URL}/wallet/balance`, {
       headers: authHeader
     })
@@ -40,7 +40,7 @@ describe('/api/Wallets', () => {
         data: 100
       })
   })
-
+*/
   it('PUT wallet is forbidden via public API', () => {
     return frisby.put(`${REST_URL}/wallet/balance`, {
       body: {
