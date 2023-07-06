@@ -74,7 +74,7 @@ jobs:
         run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "Install application"
         if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' || github.repository != 'Sapor2010/IU-juice-shop-DevSecOps' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
-        run: npm install --ignore-scripts
+        run: npm install
       - name: "Execute unit tests"
         if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' || github.repository != 'Sapor2010/IU-juice-shop-DevSecOps' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
         uses: nick-invision/retry@45ba062d357edb3b29c4a94b456b188716f61020 #v2: 2.4.1 available
@@ -94,9 +94,53 @@ jobs:
           path: |
             frontend-lcov.info
             server-lcov.info
+  api-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node-version: [16, 18]
+    steps:
+      - name: "Check out Git repository"
+        if: github.repository == 'juice-shop/juice-shop' || github.repository != 'juice-shop/juice-shop' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+      - name: "Use Node.js ${{ matrix.node-version }}"
+        if: github.repository == 'juice-shop/juice-shop' || github.repository != 'juice-shop/juice-shop' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: "Install CLI tools"
+        if: github.repository == 'juice-shop/juice-shop' || github.repository != 'juice-shop/juice-shop' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
+      - name: "Install application"
+        if: github.repository == 'juice-shop/juice-shop' || github.repository != 'juice-shop/juice-shop' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        run: npm install
+      - name: "Execute integration tests"
+        if: github.repository == 'juice-shop/juice-shop' || github.repository != 'juice-shop/juice-shop' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        uses: nick-invision/retry@45ba062d357edb3b29c4a94b456b188716f61020 #v2: 2.4.1 available
+        with:
+          timeout_minutes: 5
+          max_attempts: 3
+          command: |
+            if [ "$RUNNER_OS" == "Windows" ]; then
+            set NODE_ENV=test
+            else
+            export NODE_ENV=test
+            fi
+            npm run frisby
+          shell: bash
+      - name: "Copy API test coverage data"
+        run: cp build/reports/coverage/api-tests/lcov.info api-lcov.info
+      - name: "Upload API test coverage data"
+        if: github.repository == 'juice-shop/juice-shop' && github.event_name == 'push' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
+        uses: actions/upload-artifact@6673cd052c4cd6fcf4b4e6e60ea986c889389535 #v3: v3.0.0 available
+        with:
+          name: api-test-lcov
+          path: |
+            api-lcov.info
 
   coverage-report:
-      needs: [test]
+      needs: [test,api-test]
       runs-on: ubuntu-latest
       if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' && github.event_name == 'push'
       steps:
@@ -106,10 +150,10 @@ jobs:
           uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 #v3: v3.0.0 available
           with:
             name: unit-test-lcov
-        #- name: "Download API test coverage data"
-         # uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 #v3: v3.0.0 available
-          #with:
-            #name: api-test-lcov
+        - name: "Download API test coverage data"
+          uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 #v3: v3.0.0 available
+          with:
+            name: api-test-lcov
         - name: "Publish coverage to Codeclimate"
           env:
             CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
@@ -119,7 +163,8 @@ jobs:
             sed -i s/SF:/SF:frontend\\//g frontend-lcov.info
             ./cc-test-reporter format-coverage -t lcov -o codeclimate.frontend.json frontend-lcov.info
             ./cc-test-reporter format-coverage -t lcov -o codeclimate.server.json server-lcov.info
-            ./cc-test-reporter sum-coverage codeclimate.*.json -p 2
+            ./cc-test-reporter format-coverage -t lcov -o codeclimate.api.json api-lcov.info
+            ./cc-test-reporter sum-coverage codeclimate.*.json -p 3
             ./cc-test-reporter upload-coverage
           shell: bash 
   
