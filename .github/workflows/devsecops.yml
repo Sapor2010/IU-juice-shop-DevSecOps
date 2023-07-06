@@ -132,9 +132,7 @@ jobs:
             npm run frisby
           shell: bash
       - name: "Copy API test coverage data"
-        run: |
-          ls -la
-          cp build/reports/coverage/api-tests/lcov.info api-lcov.info
+        run: cp build/reports/coverage/api-tests/lcov.info api-lcov.info
       - name: "Upload API test coverage data"
         if: github.repository == 'Sapor2010/IU-juice-shop-DevSecOps' && github.event_name == 'push' && matrix.os == 'ubuntu-latest' && matrix.node-version == '16'
         uses: actions/upload-artifact@6673cd052c4cd6fcf4b4e6e60ea986c889389535 #v3: v3.0.0 available
