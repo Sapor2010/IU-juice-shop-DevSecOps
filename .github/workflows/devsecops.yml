@@ -267,6 +267,7 @@ jobs:
 
 
   zap_scan:
+    permissions: write-all
     runs-on: ubuntu-latest
     needs: deploy
     name: "Scan Juice Shop preview instance on Azure"
@@ -279,6 +280,7 @@ jobs:
         uses: zaproxy/action-baseline@v0.8.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_action: false
           target: 'https://as-devsecops.azurewebsites.net'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a -j'

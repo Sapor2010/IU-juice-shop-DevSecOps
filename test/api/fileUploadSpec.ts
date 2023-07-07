@@ -31,16 +31,6 @@ describe('/file-upload', () => {
       .expect('status', 204)
   })
 
-  /*it('POST file with illegal type for client validation but valid for API', () => {
-    const file = path.resolve(__dirname, '../files/invalidTypeForClient.exe')
-    const form = frisby.formData()
-    form.append('file', fs.createReadStream(file))
-
-    // @ts-expect-error
-    return frisby.post(URL + '/file-upload', { headers: { 'Content-Type': form.getHeaders()['content-type'] }, body: form })
-      .expect('status', 204)
-  })*/
-
   it('POST file type XML deprecated for API', () => {
     const file = path.resolve(__dirname, '../files/deprecatedTypeForServer.xml')
     const form = frisby.formData()
