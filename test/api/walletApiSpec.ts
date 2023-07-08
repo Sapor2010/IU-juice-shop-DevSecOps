@@ -38,7 +38,7 @@ describe('/api/Wallets', () => {
     })
       .expect('status', 401)
   })
-  
+
   it('PUT charge wallet from foreign credit card is forbidden', () => {
     return frisby.put(`${REST_URL}/wallet/balance`, {
       headers: authHeader,
