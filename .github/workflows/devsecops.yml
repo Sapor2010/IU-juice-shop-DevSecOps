@@ -277,10 +277,9 @@ jobs:
         with:
           ref: main
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.3.0
+        uses: zaproxy/action-baseline@v0.8.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          fail_action: false
           target: 'https://as-devsecops.azurewebsites.net'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a -j'
