@@ -51,25 +51,25 @@ products:
     fileForRetrieveBlueprintChallenge: 'https://sptf.info/images/pn1_fbl.pdf'
     exifForBlueprintChallenge:
       - ~
-  - name: 'DevSecOps Reference Architectures 2019'
+  - name: 'DevOps Reference Architectures 2019'
     description: 'Gloriously referential! Whitepaperesquely architectural!'
     price: 42.00
     quantity: 3
     image: 'https://www.alldaydevops.com/hubfs/2019-ADDO/Operation%20Graphics/Untitled%20design%20(3).png'
     urlForProductTamperingChallenge: 'http://bit.ly/2YIjdt7'
-  - name: 'DevSecOps Reference Architectures 2018'
+  - name: 'DevOps Reference Architectures 2018'
     description: 'Very referential! Mildly architectural!'
     price: 21.00
     image: undefined.jpg
     useForChristmasSpecialChallenge: true
-  - name: 'Epic Failures in DevSecOps, Vol. 1'
-    description: 'One topic. Nine authors. Where did they go wrong? Through short stories from expert practitioners, observe patterns the DevSecOps community can learn from to safely push the boundaries of software development.'
+  - name: 'Epic Failures in DevOps, Vol. 1'
+    description: 'One topic. Nine authors. Where did they go wrong? Through short stories from expert practitioners, observe patterns the DevOps community can learn from to safely push the boundaries of software development.'
     price: 7.42
     image: 'https://www.alldaydevops.com/hubfs/2019-ADDO/Sponsor%20Logos/Epic%20Failures%20Volume%2001%20-%20Featured%20Image.jpg'
-  - name: '2018 DevSecOps'
-    description: 'Introduction to DevSecOps by DJ Schleen'
+  - name: '2018 DevOps'
+    description: 'Introduction to DevOps by DJ Schleen'
     price: 99.99
-    image: 'https://www.alldaydevops.com/hubfs/Cover-DevSecOps@2x.png'
+    image: 'https://www.alldaydevops.com/hubfs/Cover-DevOps@2x.png'
   - name: '2018 Cloud Native Infrastructure'
     description: '101 and 202'
     price: 39.99
@@ -102,7 +102,7 @@ products:
     reviews:
       - { text: 'Bah, puny earthling music.', author: bender }
   -
-    name: 'DevSecOps Unicorn Poster, 80x60'
+    name: 'DevOps Unicorn Poster, 80x60'
     description: 'Glossy print to make the rainbow colors shine even brighter.'
     price: 9.99
     image: 'https://pbs.twimg.com/media/CEQOsL9XIAAezy_?format=png&name=small'
