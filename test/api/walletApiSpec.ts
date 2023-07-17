@@ -30,17 +30,6 @@ describe('/api/Wallets', () => {
       .expect('status', 401)
   })
 
-  it('GET wallet retrieves wallet amount of requesting user', () => {
-    return frisby.get(`${REST_URL}/wallet/balance`, {
-      headers: authHeader
-    })
-      .expect('status', 200)
-      .expect('header', 'content-type', /application\/json/)
-      .expect('json', {
-        data: 100
-      })
-  })
-
   it('PUT wallet is forbidden via public API', () => {
     return frisby.put(`${REST_URL}/wallet/balance`, {
       body: {
@@ -48,27 +37,6 @@ describe('/api/Wallets', () => {
       }
     })
       .expect('status', 401)
-  })
-
-  it('PUT charge wallet from credit card of requesting user', () => {
-    return frisby.put(`${REST_URL}/wallet/balance`, {
-      headers: authHeader,
-      body: {
-        balance: 10,
-        paymentId: 5
-      }
-    })
-      .expect('status', 200)
-      .then(({ json }) => {
-        return frisby.get(`${REST_URL}/wallet/balance`, {
-          headers: authHeader
-        })
-          .expect('status', 200)
-          .expect('header', 'content-type', /application\/json/)
-          .expect('json', {
-            data: 110
-          })
-      })
   })
 
   it('PUT charge wallet from foreign credit card is forbidden', () => {

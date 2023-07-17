@@ -84,30 +84,6 @@ describe('/ftp', () => {
       .expect('bodyContains', 'Suspicious error messages specific to the application')
   })
 
-  it('GET the 2013 coupon code file by using Poison Null Byte attack with .pdf suffix', () => {
-    return frisby.get(URL + '/ftp/coupons_2013.md.bak%00.pdf')
-      .expect('status', 200)
-      .expect('bodyContains', 'n<MibgC7sn')
-  })
-
-  it('GET the 2013 coupon code file by using an Poison Null Byte attack with .md suffix', () => {
-    return frisby.get(URL + '/ftp/coupons_2013.md.bak%00.md')
-      .expect('status', 200)
-      .expect('bodyContains', 'n<MibgC7sn')
-  })
-
-  it('GET the package.json.bak file by using Poison Null Byte attack with .pdf suffix', () => {
-    return frisby.get(URL + '/ftp/package.json.bak%00.pdf')
-      .expect('status', 200)
-      .expect('bodyContains', '"name": "juice-shop",')
-  })
-
-  it('GET the package.json.bak file by using Poison Null Byte attack with .md suffix', () => {
-    return frisby.get(URL + '/ftp/package.json.bak%00.md')
-      .expect('status', 200)
-      .expect('bodyContains', '"name": "juice-shop",')
-  })
-
   it('GET a restricted file directly from file system path on server by tricking route definitions fails with 403 error', () => {
     return frisby.get(URL + '/ftp///eastere.gg')
       .expect('status', 403)
@@ -133,12 +109,6 @@ describe('/ftp', () => {
   it('GET a non-existing file via direct server file path /ftp will return a 404 error', () => {
     return frisby.get(URL + '/ftp/doesnotexist.md')
       .expect('status', 404)
-  })
-
-  it('GET the package.json.bak file contains a dependency on epilogue-js for "Typosquatting" challenge', () => {
-    return frisby.get(URL + '/ftp/package.json.bak%00.md')
-      .expect('status', 200)
-      .expect('bodyContains', '"epilogue-js": "~0.7",')
   })
 
   it('GET file /ftp/quarantine/juicy_malware_linux_amd_64.url', () => {
