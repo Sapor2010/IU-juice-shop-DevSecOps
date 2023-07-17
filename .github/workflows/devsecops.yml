@@ -270,7 +270,7 @@ jobs:
     permissions: write-all
     runs-on: ubuntu-latest
     needs: deploy
-    name: "Scan Juice Shop preview instance on Azure"
+    name: "DAST - Scan Juice Shop preview instance on Azure"
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2 #v2: v2.3.4 available
