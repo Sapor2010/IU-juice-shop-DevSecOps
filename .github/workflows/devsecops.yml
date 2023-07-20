@@ -114,6 +114,7 @@ jobs:
             server-lcov.info
   api-test:
     name: "API Unit Test"
+    needs: TruffleHog
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
