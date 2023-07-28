@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: DevSecOps - Build, test, SAST, deploy and DAST Node.js app to Azure Web App - AS-DevSecOps-
+name: DevSecOps - Build, test, SAST, deploy and DAST Node.js app to Azure Web App - AS-DevSecOps
 
 on:
   push:
@@ -219,6 +219,7 @@ jobs:
 
 
   build:
+    permissions: write-all
     name: "Build npm artefact"
     runs-on: ${{ matrix.os }}
     needs: [coverage-report, analysis]
@@ -229,6 +230,10 @@ jobs:
     steps:
       - name: "Check out Git repository"
         uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+      - name: "Initialize CodeQL"
+        uses: github/codeql-action/init@v2
+        with:
+          languages: javascript
       - name: "Use Node.js ${{ matrix.node-version }}"
         uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
         with:
@@ -249,6 +254,8 @@ jobs:
           echo "PCKG_CPU_ARCH=x64" >> $GITHUB_ENV
           echo "PCKG_NODE_VERSION=${{ matrix.node-version }}" >> $GITHUB_ENV
         shell: bash
+      - name: "Perfom CodeQL"
+        uses: github/codeql-action/analyze@v2
       - name: "Package application"
         run: |
           npm install --production
