@@ -216,17 +216,14 @@ jobs:
               -Dsonar.organization=isef-quiz
               -Dsonar.typescript.tsconfigPaths=frontend/*
               -Dsonar.javascript.lcov.reportPaths=*.info
-
-
-  build:
-    permissions: write-all
-    name: "Build npm artefact"
-    runs-on: ${{ matrix.os }}
+  codeql:
     needs: [coverage-report, analysis]
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node-version: [18]
+    permissions: 
+      actions: read
+      contents: read
+      security-events: write
+    name: "Vulnarability Scan with codeQL"
+    runs-on: ubuntu-latest
     steps:
       - name: "Check out Git repository"
         uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
@@ -234,6 +231,23 @@ jobs:
         uses: github/codeql-action/init@v2
         with:
           languages: javascript
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v1
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
+
+  build:
+    permissions: write-all
+    name: "Build npm artefact"
+    runs-on: ${{ matrix.os }}
+    needs: codeql
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [18]
+    steps:
+      - name: "Check out Git repository"
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
       - name: "Use Node.js ${{ matrix.node-version }}"
         uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e #v1: v2.x available
         with:
@@ -254,8 +268,6 @@ jobs:
           echo "PCKG_CPU_ARCH=x64" >> $GITHUB_ENV
           echo "PCKG_NODE_VERSION=${{ matrix.node-version }}" >> $GITHUB_ENV
         shell: bash
-      - name: "Perfom CodeQL"
-        uses: github/codeql-action/analyze@v2
       - name: "Package application"
         run: |
           npm install --production
