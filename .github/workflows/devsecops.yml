@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: DevSecOps - Build, test, SAST, deploy and DAST Node.js app to Azure Web App - AS-DevSecOps-
+name: DevSecOps - Build, test, SAST, deploy and DAST Node.js app to Azure Web App - AS-DevSecOps
 
 on:
   push:
@@ -216,12 +216,31 @@ jobs:
               -Dsonar.organization=isef-quiz
               -Dsonar.typescript.tsconfigPaths=frontend/*
               -Dsonar.javascript.lcov.reportPaths=*.info
-
+  codeql:
+    needs: [coverage-report, analysis]
+    permissions: 
+      actions: read
+      contents: read
+      security-events: write
+    name: "Vulnarability Scan with codeQL"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Check out Git repository"
+        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f #v2: v2.3.4 available
+      - name: "Initialize CodeQL"
+        uses: github/codeql-action/init@v2
+        with:
+          languages: javascript
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
 
   build:
+    permissions: write-all
     name: "Build npm artefact"
     runs-on: ${{ matrix.os }}
-    needs: [coverage-report, analysis]
+    needs: codeql
     strategy:
       matrix:
         os: [ubuntu-latest]
