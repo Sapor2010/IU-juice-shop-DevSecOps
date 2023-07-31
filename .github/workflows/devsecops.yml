@@ -222,7 +222,7 @@ jobs:
       actions: read
       contents: read
       security-events: write
-    name: "Vulnarability Scan with codeQL"
+    name: "SAST- Codeql Vulnarability Scan"
     runs-on: ubuntu-latest
     steps:
       - name: "Check out Git repository"
