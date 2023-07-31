@@ -1,6 +1,6 @@
 languages: javascript
 paths:
-  - src
+  - ./
 paths-ignore:
   - '**/*.test.js'
   - 'test/**'
