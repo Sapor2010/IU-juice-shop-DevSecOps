@@ -216,13 +216,14 @@ jobs:
               -Dsonar.organization=isef-quiz
               -Dsonar.typescript.tsconfigPaths=frontend/*
               -Dsonar.javascript.lcov.reportPaths=*.info
+              -Dsonar.exclusions=test/**
   codeql:
     needs: [coverage-report, analysis]
     permissions: 
       actions: read
       contents: read
       security-events: write
-    name: "Vulnarability Scan with codeQL"
+    name: "SAST- Codeql Vulnarability Scan"
     runs-on: ubuntu-latest
     steps:
       - name: "Check out Git repository"
@@ -230,7 +231,7 @@ jobs:
       - name: "Initialize CodeQL"
         uses: github/codeql-action/init@v2
         with:
-          languages: javascript
+          config-file: ./.github/codeql/codeql-config.yml
       - name: Autobuild
         uses: github/codeql-action/autobuild@v2
       - name: Perform CodeQL Analysis
