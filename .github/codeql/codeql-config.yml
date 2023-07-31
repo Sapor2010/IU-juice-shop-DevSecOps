@@ -3,3 +3,4 @@ paths-ignore:
   - src/node_modules
   - '**/*.test.js'
   - 'test/**'
+queries: security-extended
