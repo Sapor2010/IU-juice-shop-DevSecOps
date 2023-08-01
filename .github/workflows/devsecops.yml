@@ -54,7 +54,7 @@ jobs:
           npm run lint:config -- -f ./config/tutorial.yml &&
           npm run lint:config -- -f ./config/unsafe.yml
 
-  TruffleHog: 
+  truffleHog: 
     name: TruffleHog Secrets Scan
     runs-on: ubuntu-latest
     steps:
@@ -72,7 +72,7 @@ jobs:
 
   test:
     name: "Unit Test Server and Frontend" 
-    needs: TruffleHog
+    needs: truffleHog
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -114,7 +114,7 @@ jobs:
             server-lcov.info
   api-test:
     name: "API Unit Test"
-    needs: TruffleHog
+    needs: truffleHog
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -302,7 +302,6 @@ jobs:
           slot-name: 'production'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_DevSecOps }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-
 
   zap_scan:
     permissions: write-all
