@@ -1,0 +1,8 @@
+languages: javascript
+paths:
+  - ./
+paths-ignore:
+  - '**/*.test.js'
+  - 'test/**'
+queries:
+  - uses: security-and-quality
