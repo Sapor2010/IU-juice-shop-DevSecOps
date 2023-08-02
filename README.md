@@ -24,6 +24,7 @@ The pipelines will be configure with Github Actions and Azure
 
 [Steve Ackermann ](https://github.com/Sapor2010) aka `Sapor2010`
 
+[Original juice-shop](https://github.com/juice-shop/juice-shop)
 
 DevSecOps Branch Test
 
@@ -45,9 +46,6 @@ For a detailed introduction, full list of features and architecture overview ple
 
 - [Setup](#setup)
     - [From Sources](#from-sources)
-    - [Packaged Distributions](#packaged-distributions)
-    - [Docker Container](#docker-container)
-- [Demo](#demo)
 - [Licensing](#licensing)
 
 ## Setup
@@ -68,70 +66,7 @@ For a detailed introduction, full list of features and architecture overview ple
 5. Run `npm start`
 6. Browse to <http://localhost:3000>
 
-### Packaged Distributions
-
-[![GitHub release](https://img.shields.io/github/downloads/juice-shop/juice-shop/total.svg)](https://github.com/juice-shop/juice-shop/releases/latest)
-[![SourceForge](https://img.shields.io/sourceforge/dm/juice-shop?label=sourceforge%20downloads)](https://sourceforge.net/projects/juice-shop/)
-[![SourceForge](https://img.shields.io/sourceforge/dt/juice-shop?label=sourceforge%20downloads)](https://sourceforge.net/projects/juice-shop/)
-
-1. Install a 64bit [node.js](#nodejs-version-compatibility) on your Windows, MacOS or Linux machine
-2. Download `juice-shop-<version>_<node-version>_<os>_x64.zip` (or
-   `.tgz`) attached to
-   [latest release](https://github.com/juice-shop/juice-shop/releases/latest)
-3. Unpack and `cd` into the unpacked folder
-4. Run `npm start`
-5. Browse to <http://localhost:3000>
-
-> Each packaged distribution includes some binaries for `sqlite3` and
-> `libxmljs` bound to the OS and node.js version which `npm install` was
-> executed on.
-
-### Docker Container
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/bkimminich/juice-shop.svg)](https://hub.docker.com/r/bkimminich/juice-shop)
-![Docker Stars](https://img.shields.io/docker/stars/bkimminich/juice-shop.svg)
-[![](https://images.microbadger.com/badges/image/bkimminich/juice-shop.svg)](https://microbadger.com/images/bkimminich/juice-shop
-"Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/bkimminich/juice-shop.svg)](https://microbadger.com/images/bkimminich/juice-shop
-"Get your own version badge on microbadger.com")
-
-1. Install [Docker](https://www.docker.com)
-2. Run `docker pull bkimminich/juice-shop`
-3. Run `docker run --rm -p 3000:3000 bkimminich/juice-shop`
-4. Browse to <http://localhost:3000> (on macOS and Windows browse to
-   <http://192.168.99.100:3000> if you are using docker-machine instead of the native docker installation)
-
-
-### Azure Container Instance
-
-1. Open and login (via `az login`) to your
-   [Azure CLI](https://azure.github.io/projects/clis/) **or** login to the [Azure Portal](https://portal.azure.com),
-   open the _CloudShell_
-   and then choose _Bash_ (not PowerShell).
-2. Create a resource group by running `az group create --name <group name> --location <location name, e.g. "centralus">`
-3. Create a new container by
-   running `az container create --resource-group <group name> --name <container name> --image bkimminich/juice-shop --dns-name-label <dns name label> --ports 3000 --ip-address public`
-4. Your container will be available at `http://<dns name label>.<location name>.azurecontainer.io:3000`
-
-
-## Demo
-
-Feel free to have a look at the latest version of OWASP Juice Shop:
-<http://demo.owasp-juice.shop>
-
-> This is a deployment-test and sneak-peek instance only! You are __not
-> supposed__ to use this instance for your own hacking endeavours! No
-> guaranteed uptime! Guaranteed stern looks if you break it!
-
-## References
-
-Did you write a blog post, magazine article or do a podcast about or mentioning OWASP Juice Shop? Or maybe you held or
-joined a conference talk or meetup session, a hacking workshop or public training where this project was mentioned?
-
-Add it to our ever-growing list of [REFERENCES.md](REFERENCES.md) by forking and opening a Pull Request!
-
-
-## Contributors
+## Contributors or Original Project
 
 The OWASP Juice Shop core project team are:
 
