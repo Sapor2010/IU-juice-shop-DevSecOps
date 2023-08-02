@@ -26,7 +26,7 @@ The pipelines will be configure with Github Actions and Azure
 
 [Original juice-shop](https://github.com/juice-shop/juice-shop)
 
-DevSecOps Branch Test
+DevOps Branch Test
 
 
 ## What is Juice Shop ?
