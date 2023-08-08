@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 
-name: DevSecOps - Build, test, SAST, deploy and DAST Node.js app to Azure Web App - AS-DevSecOps
+name: DevSecOps - Build, test, SAST, deploy and DAST Node.js app to Azure Web App - AS-DevSecOps-
 
 
 on:
