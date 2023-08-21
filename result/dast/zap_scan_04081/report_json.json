@@ -1,0 +1,3010 @@
+{
+	"@programName": "OWASP ZAP",
+	"@version": "2.13.0",
+	"@generated": "Fri, 4 Aug 2023 12:55:52",
+	"site":[ 
+		{
+			"@name": "https://as-devsecops.azurewebsites.net",
+			"@host": "as-devsecops.azurewebsites.net",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10095",
+					"alertRef": "10095",
+					"alert": "Backup File Disclosure",
+					"name": "Backup File Disclosure",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>A backup of the file was disclosed by the web server</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine%20-%20Copy",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine%20-%20Copy",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine%20-%20Copy]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine%20-%20Copy%20(2)",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine%20-%20Copy%20(2)",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine%20-%20Copy%20(2)]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine%20-%20Copy%20(3)",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine%20-%20Copy%20(3)",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine%20-%20Copy%20(3)]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine.bac",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine.bac",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine.bac]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine.backup",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine.backup",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine.backup]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine.bak",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine.bak",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine.bak]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine.jar",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine.jar",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine.jar]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine.log",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine.log",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine.log]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine.old",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine.old",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine.old]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine.swp",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine.swp",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine.swp]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine.tar",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine.tar",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine.tar]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine.zip",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine.zip",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine.zip]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine.~bk",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine.~bk",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine.~bk]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantinebackup",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantinebackup",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantinebackup]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine~",
+							"method": "GET",
+							"param": "",
+							"attack": "https://as-devsecops.azurewebsites.net/ftp/quarantine~",
+							"evidence": "A backup of [https://as-devsecops.azurewebsites.net/ftp/quarantine] is available at [https://as-devsecops.azurewebsites.net/ftp/quarantine~]",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/quarantine"
+						}
+					],
+					"count": "15",
+					"solution": "<p>Do not edit files in-situ on the web server, and ensure that un-necessary files (including hidden files) are removed from the web server.</p>",
+					"otherinfo": "<p>https://as-devsecops.azurewebsites.net/ftp/quarantine</p>",
+					"reference": "<p>https://cwe.mitre.org/data/definitions/530.html</p><p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/04-Review_Old_Backup_and_Unreferenced_Files_for_Sensitive_Information.html</p>",
+					"cweid": "530",
+					"wascid": "34",
+					"sourceid": "3226"
+				},
+				{
+					"pluginid": "40038",
+					"alertRef": "40038",
+					"alert": "Bypassing 403",
+					"name": "Bypassing 403",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Bypassing 403 endpoints may be possible, the scan rule sent a payload that caused the response to be accessible (status code 200).</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/%20/ftp/eastere.gg%20/",
+							"method": "GET",
+							"param": "",
+							"attack": "/%20/ftp/eastere.gg%20/",
+							"evidence": "",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/%20/ftp/encrypt.pyc%20/",
+							"method": "GET",
+							"param": "",
+							"attack": "/%20/ftp/encrypt.pyc%20/",
+							"evidence": "",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/%20/ftp/suspicious_errors.yml%20/",
+							"method": "GET",
+							"param": "",
+							"attack": "/%20/ftp/suspicious_errors.yml%20/",
+							"evidence": "",
+							"otherinfo": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml"
+						}
+					],
+					"count": "3",
+					"solution": "",
+					"otherinfo": "<p>https://as-devsecops.azurewebsites.net/ftp/eastere.gg</p>",
+					"reference": "<p>https://www.acunetix.com/blog/articles/a-fresh-look-on-reverse-proxy-related-attacks/</p><p>https://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-Out-2.pdf</p><p>https://www.contextis.com/en/blog/server-technologies-reverse-proxy-bypass</p>",
+					"cweid": "0",
+					"wascid": "0",
+					"sourceid": "3803"
+				},
+				{
+					"pluginid": "40040",
+					"alertRef": "40040",
+					"alert": "CORS Misconfiguration",
+					"name": "CORS Misconfiguration",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>This CORS misconfiguration could allow an attacker to perform AJAX queries to the vulnerable website from a malicious page loaded by the victim's user agent.</p><p>In order to perform authenticated AJAX queries, the server must specify the header \"Access-Control-Allow-Credentials: true\" and the \"Access-Control-Allow-Origin\" header must be set to null or the malicious page's domain. Even if this misconfiguration doesn't allow authenticated AJAX requests, unauthenticated sensitive content can still be accessed (e.g intranet websites).</p><p>A malicious page can belong to a malicious website but also a trusted website with flaws (e.g XSS, support of HTTP without TLS allowing code injection through MITM, etc).</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public/favicon_js.ico",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/polyfills.js",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/runtime.js",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/styles.css",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: https://r1vDK5Sz.com",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "22",
+					"solution": "<p>If a web resource contains sensitive information, the origin should be properly specified in the Access-Control-Allow-Origin header. Only trusted websites needing this resource should be specified in this header, with the most secured protocol supported.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</p><p>https://portswigger.net/web-security/cors</p>",
+					"cweid": "942",
+					"wascid": "14",
+					"sourceid": "3834"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10098",
+					"alertRef": "10098",
+					"alert": "Cross-Domain Misconfiguration",
+					"name": "Cross-Domain Misconfiguration",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public/favicon_js.ico",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/polyfills.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/runtime.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/styles.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+					"otherinfo": "<p>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</p>",
+					"reference": "<p>https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy</p>",
+					"cweid": "264",
+					"wascid": "14",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "40035",
+					"alertRef": "40035",
+					"alert": "Hidden File Found",
+					"name": "Hidden File Found",
+					"riskcode": "2",
+					"confidence": "1",
+					"riskdesc": "Medium (Low)",
+					"desc": "<p>A sensitive file was identified as accessible or available. This may leak administrative, configuration, or credential information which can be leveraged by a malicious individual to further attack the system or conduct social engineering efforts.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/._darcs",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HTTP/1.1 200 OK",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/.bzr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HTTP/1.1 200 OK",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/.hg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HTTP/1.1 200 OK",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/BitKeeper",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HTTP/1.1 200 OK",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"solution": "<p>Consider whether or not the component is actually required in production, if it isn't then disable it. If it is then ensure access to it requires appropriate authentication and authorization, or limit exposure to internal systems or specific source IPs, etc.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://blog.hboeck.de/archives/892-Introducing-Snallygaster-a-Tool-to-Scan-for-Secrets-on-Web-Servers.html</p>",
+					"cweid": "538",
+					"wascid": "13",
+					"sourceid": "2292"
+				},
+				{
+					"pluginid": "40025",
+					"alertRef": "40025",
+					"alert": "Proxy Disclosure",
+					"name": "Proxy Disclosure",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>2 proxy server(s) were detected or fingerprinted. This information helps a potential attacker to determine </p><p> - A list of targets for an attack against the application.</p><p> - Potential vulnerabilities on the proxy servers that service the application.</p><p> - The presence or absence of any proxy-based components that might cause attacks against the application to be detected, prevented, or mitigated. </p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public/favicon_js.ico",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/polyfills.js",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/runtime.js",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/styles.css",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "TRACE, OPTIONS methods with 'Max-Forwards' header. TRACK method.",
+							"evidence": "",
+							"otherinfo": "Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: \n- Unknown\n- Unknown\nThe following web/application server has been identified: \n- Unknown\n"
+						}
+					],
+					"count": "22",
+					"solution": "<p>Disable the 'TRACE' method on the proxy servers, as well as the origin web/application server.</p><p>Disable the 'OPTIONS' method on the proxy servers, as well as the origin web/application server, if it is not required for other purposes, such as 'CORS' (Cross Origin Resource Sharing).</p><p>Configure the web and application servers with custom error pages, to prevent 'fingerprintable' product-specific error pages being leaked to the user in the event of HTTP errors, such as 'TRACK' requests for non-existent pages.</p><p>Configure all proxies, application servers, and web servers to prevent disclosure of the technology and version information in the 'Server' and 'X-Powered-By' HTTP response headers.</p><p></p>",
+					"otherinfo": "<p>Using the TRACE, OPTIONS, and TRACK methods, the following proxy servers have been identified between OWASP ZAP and the application/web server: </p><p>- Unknown</p><p>- Unknown</p><p>The following web/application server has been identified: </p><p>- Unknown</p><p></p>",
+					"reference": "<p>https://tools.ietf.org/html/rfc7231#section-5.1.2</p>",
+					"cweid": "200",
+					"wascid": "45",
+					"sourceid": "3575"
+				},
+				{
+					"pluginid": "40039",
+					"alertRef": "40039",
+					"alert": "Web Cache Deception",
+					"name": "Web Cache Deception",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Web cache deception may be possible. It may be possible for unauthorised user to view sensitive data on this page.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "",
+							"attack": "/test.css,/test.jpg,/test.js,/test.html,/test.gif,/test.png,/test.svg,/test.php,/test.txt,/test.pdf,/test.asp,",
+							"evidence": "",
+							"otherinfo": "Cached Authorised Response and Unauthorised Response are similar."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "",
+							"attack": "/test.css,/test.jpg,/test.js,/test.html,/test.gif,/test.png,/test.svg,/test.php,/test.txt,/test.pdf,/test.asp,",
+							"evidence": "",
+							"otherinfo": "Cached Authorised Response and Unauthorised Response are similar."
+						}
+					],
+					"count": "2",
+					"solution": "<p>It is strongly advised to refrain from classifying file types, such as images or stylesheets solely by their URL and file extension. Instead you should make sure that files are cached based on their Content-Type header.</p>",
+					"otherinfo": "<p>Cached Authorised Response and Unauthorised Response are similar.</p>",
+					"reference": "<p>https://blogs.akamai.com/2017/03/on-web-cache-deception-attacks.html</p><p>https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/web-cache-deception/</p>",
+					"cweid": "0",
+					"wascid": "0",
+					"sourceid": "3968"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "6",
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bypassSecurityTrustHtml",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bypassSecurityTrustHtml",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-2",
+					"alert": "Deprecated Feature Policy Header Set",
+					"name": "Deprecated Feature Policy Header Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The header has now been renamed to Permissions-Policy. </p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/polyfills.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/runtime.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						}
+					],
+					"count": "8",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header instead of the Feature-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/</p>",
+					"cweid": "16",
+					"wascid": "15",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10035",
+					"alertRef": "10035",
+					"alert": "Strict-Transport-Security Header Not Set",
+					"name": "Strict-Transport-Security Header Not Set",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public/favicon_js.ico",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/polyfills.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/runtime.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/styles.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "11",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
+					"cweid": "319",
+					"wascid": "15",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1734944650",
+							"otherinfo": "1734944650, which evaluates to: 2024-12-23 09:04:10"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1734944650, which evaluates to: 2024-12-23 09:04:10</p>",
+					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAWtQTFRFAAAA/PPQ9Nhc2q402qQ12qs2/PTX2pg12p81+/LM89NE9dto2q82+/fp2rM22qY39d6U+/bo2qo2/frx/vz32q812qs12qE279SU8c4w9NZP+/LK//367s9y7s925cp0/vzw9t92//342po2/vz25s1579B6+OSO2bQ0/v799NyT8tE79dld8Msm+OrC/vzx79KA2IYs7s6I9d6R4cJe9+OF/PLI/fry79OF/v30//328tWB89RJ8c9p8c0u9eCf//7+9txs6sts5Mdr+++5+u2z/vrv+/fq6cFz8dBs8tA57cpq+OaU9uGs27Y8//799NdX/PbY9uB89unJ//z14sNf+emh+emk+vDc+uys9+OL8dJy89NH+eic8tN5+OaV+OWR9N2n9dtl9t529+KF9+GB9Nue9NdU8tR/9t5y89qW9dpj89iO89eG/vvu2pQ12Y4z/vzy2Ict/vvv48dr/vzz4sNg///+2Igty3PqwQAAAAF0Uk5TAEDm2GYAAACtSURBVBjTY2AgA2iYlJWVhfohBPg0yx38y92dS0pKVOVBAqIi6sb2vsWWpfrFeTI8QAEhYQEta28nCwM1OVleZqCAmKCEkUdwYWmhQnFeOStQgL9cySqkNNDHVJGbiY0FKCCuYuYSGRsV5KgjxcXIARRQNncNj09JTgqw0ZbkZAcK5LuFJaRmZqfHeNnpSucDBQoiEtOycnIz4qI9bfUKQA6pKKqAgqIKQyK8BgAZ5yfODmnHrQAAAABJRU5ErkJggg==",
+							"otherinfo": "\uFFFDPNG\r\n\\x001a\n\\x0000\\x0000\\x0000\rIHDR\\x0000\\x0000\\x0000\\x0010\\x0000\\x0000\\x0000\\x0010\\x0008\\x0003\\x0000\\x0000\\x0000(-\\x000fS\\x0000\\x0000\\x0000\\x0004gAMA\\x0000\\x0000\uFFFD\uFFFD\\x000b\uFFFDa\\x0005\\x0000\\x0000\\x0001kPLTE\\x0000\\x0000\\x0000\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\\u06AE4\u06A45\u06AB6\uFFFD\uFFFD\uFFFD\u06985\u069F5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDD\uFFFD\uFFFDh\u06AF6\uFFFD\uFFFD\uFFFD\u06B36\u06A67\uFFFD\u0794\uFFFD\uFFFD\uFFFD\u06AA6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06AF5\u06AB5\u06A16\uFFFD\u0514\uFFFD\uFFFD0\uFFFD\uFFFDO\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDv\uFFFD\uFFFDt\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\u069A6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFDz\uFFFD\uFFFD\u06744\uFFFD\uFFFD\uFFFD\uFFFD\u0713\uFFFD\uFFFD;\uFFFD\uFFFD]\uFFFD\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0480\u0606,\uFFFD\u0388\uFFFD\u0791\uFFFD\uFFFD^\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u04C5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0541\uFFFD\uFFFDI\uFFFD\uFFFDi\uFFFD\uFFFD.\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDl\uFFFD\uFFFDl\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDs\uFFFD\uFFFDl\uFFFD\uFFFD9\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\u06F6<\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDW\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD|\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDG\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0767\uFFFD\uFFFDe\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06DE\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\u0696\uFFFD\uFFFDc\uFFFD\u060E\uFFFD\u05C6\uFFFD\uFFFD\uFFFD\u06945\u064E3\uFFFD\uFFFD\uFFFD\u0607-\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`\uFFFD\uFFFD\uFFFD\u0608-\uFFFDs\uFFFD\uFFFD\\x0000\\x0000\\x0000\\x0001tRNS\\x0000@\uFFFD\uFFFDf\\x0000\\x0000\\x0000\uFFFDIDAT\\x0018\uFFFDc` \\x0003h\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD!\\x0004\uFFFD4\uFFFD\\x001d\uFFFD\uFFFD\u075DKJJT\uFFFDA\\x0002\uFFFD\"\uFFFD\uFFFD\uFFFD\uFFFD\u0156\uFFFD\uFFFD\uFFFDy2<@\\x0001!a\\x0001-ko'\\x000b\\x000359Y^f\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDGpai\uFFFDBq^9+P\uFFFD\uFFFD\\\uFFFD*\uFFFD4\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFD\\x0005( \uFFFDb\uFFFD\\x0012\\x0019\\x001b\\x0015\uFFFD#\uFFFD\uFFFD\uFFFD\\x0001\\x0014P6w\r\uFFFDOIN\n\uFFFD\u0456\uFFFDd\\x0007\n\u4EC5%\uFFFDff\uFFFD\uFFFDx\uFFFD\uFFFDJ\uFFFD\\x0003\\x0005\n\"\\x0012\u04F2rr3\uFFFD=m\uFFFD\n@\\x000e\uFFFD(\uFFFD\uFFFD\uFFFD\uFFFD\nC\"\uFFFD\\x0006\\x0000\\x0019\uFFFD'\uFFFD\\x000ei\u01ED\\x0000\\x0000\\x0000\\x0000IEND\uFFFDB`\uFFFD"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "com/forms/d/e/1FAIpQLSdaNEuz0dzFA2sexCa0AJ4QOb2OYdEL04eQOLFD2Y4T-BW6ag/viewform",
+							"otherinfo": "r\uFFFD\uFFFD~\uFFFD\uFFFD\uFFFD{\uFFFDE\\x0000\uFFFDP-'Z4K\uFFFD\uFFFD\uFFFD\uFFFD\\x0003k\\x001e\uFFFD&\uFFFD\\x0000\uFFFD\\x00109\uFFFD\uFFFDa\uFFFD\\x000b\u04C7\uFFFD8\uFFFDC\u064E\\x0013\uFFFD\\x0015\uFFFDj\\x000f\uFFFD\uFFFD\\x001f\uFFFD\uFFFD"
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+							"otherinfo": "\uFFFD]\uFFFD\u37BB\uFFFD\u059Bq\u05DF\uFFFD\\x0018\uFFFD\uFFFDY\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06EF\uFFFD\\x001c\uFFFD\\x0000\\x0010\uFFFD\\x0010Q\uFFFD \uFFFD\uFFFD0\u04CFA\\x0014\uFFFDQU\uFFFDa"
+						}
+					],
+					"count": "3",
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFDPNG</p><p>\\x001a</p><p>\\x0000\\x0000\\x0000\rIHDR\\x0000\\x0000\\x0000\\x0010\\x0000\\x0000\\x0000\\x0010\\x0008\\x0003\\x0000\\x0000\\x0000(-\\x000fS\\x0000\\x0000\\x0000\\x0004gAMA\\x0000\\x0000\uFFFD\uFFFD\\x000b\uFFFDa\\x0005\\x0000\\x0000\\x0001kPLTE\\x0000\\x0000\\x0000\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\\u06AE4\u06A45\u06AB6\uFFFD\uFFFD\uFFFD\u06985\u069F5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDD\uFFFD\uFFFDh\u06AF6\uFFFD\uFFFD\uFFFD\u06B36\u06A67\uFFFD\u0794\uFFFD\uFFFD\uFFFD\u06AA6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06AF5\u06AB5\u06A16\uFFFD\u0514\uFFFD\uFFFD0\uFFFD\uFFFDO\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDv\uFFFD\uFFFDt\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\u069A6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFDz\uFFFD\uFFFD\u06744\uFFFD\uFFFD\uFFFD\uFFFD\u0713\uFFFD\uFFFD;\uFFFD\uFFFD]\uFFFD\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0480\u0606,\uFFFD\u0388\uFFFD\u0791\uFFFD\uFFFD^\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u04C5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0541\uFFFD\uFFFDI\uFFFD\uFFFDi\uFFFD\uFFFD.\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDl\uFFFD\uFFFDl\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDs\uFFFD\uFFFDl\uFFFD\uFFFD9\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\u06F6<\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDW\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD|\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDG\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0767\uFFFD\uFFFDe\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06DE\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\u0696\uFFFD\uFFFDc\uFFFD\u060E\uFFFD\u05C6\uFFFD\uFFFD\uFFFD\u06945\u064E3\uFFFD\uFFFD\uFFFD\u0607-\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`\uFFFD\uFFFD\uFFFD\u0608-\uFFFDs\uFFFD\uFFFD\\x0000\\x0000\\x0000\\x0001tRNS\\x0000@\uFFFD\uFFFDf\\x0000\\x0000\\x0000\uFFFDIDAT\\x0018\uFFFDc` \\x0003h\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD!\\x0004\uFFFD4\uFFFD\\x001d\uFFFD\uFFFD\u075DKJJT\uFFFDA\\x0002\uFFFD\"\uFFFD\uFFFD\uFFFD\uFFFD\u0156\uFFFD\uFFFD\uFFFDy2<@\\x0001!a\\x0001-ko'\\x000b\\x000359Y^f\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDGpai\uFFFDBq^9+P\uFFFD\uFFFD\\\uFFFD*\uFFFD4\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFD\\x0005( \uFFFDb\uFFFD\\x0012\\x0019\\x001b\\x0015\uFFFD#\uFFFD\uFFFD\uFFFD\\x0001\\x0014P6w\r\uFFFDOIN</p><p>\uFFFD\u0456\uFFFDd\\x0007</p><p>\u4EC5%\uFFFDff\uFFFD\uFFFDx\uFFFD\uFFFDJ\uFFFD\\x0003\\x0005</p><p>\"\\x0012\u04F2rr3\uFFFD=m\uFFFD</p><p>@\\x000e\uFFFD(\uFFFD\uFFFD\uFFFD\uFFFD</p><p>C\"\uFFFD\\x0006\\x0000\\x0019\uFFFD'\uFFFD\\x000ei\u01ED\\x0000\\x0000\\x0000\\x0000IEND\uFFFDB`\uFFFD</p>",
+					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "26"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"\"use strict\";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[179],{902:(at,Bt,d)=>{var J=d(1481),t=d(4650),k=d(\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[736],{9187:(Dt,re,d)=>{\"use strict\";d.d(re,{Xy:()=>X,ne:()=>He,\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "2",
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"\"use strict\";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[179],{902:(at,Bt,d)=>{var J=d(1481),t=d(4650),k=d(\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "200",
+					"wascid": "13",
+					"sourceid": "24"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "3",
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "502",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).   </p>",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "35"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/robots.txt",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, max-age=0",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "1",
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
+					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
+					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "17"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Storable but Non-Cacheable Content",
+					"name": "Storable but Non-Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public/favicon_js.ico",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/polyfills.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/runtime.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/styles.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						}
+					],
+					"count": "9",
+					"solution": "",
+					"otherinfo": "",
+					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10104",
+					"alertRef": "10104",
+					"alert": "User Agent Fuzzer",
+					"name": "User Agent Fuzzer",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.</p>",
+					"instances":[ 
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/assets/public",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/favicon.ico",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/acquisitions.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/announcement_encrypted.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/eastere.gg",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/encrypt.pyc",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/incident-support.kdbx",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/legal.md",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/quarantine",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/ftp/suspicious_errors.yml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Trident/7.0; rv:11.0) like Gecko",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3739.0 Safari/537.36 Edg/75.0.109.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/91.0",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A366 Safari/600.1.4",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://as-devsecops.azurewebsites.net/sitemap.xml",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "msnbot/1.1 (+http://search.msn.com/msnbot.htm)",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "168",
+					"solution": "",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/wstg</p>",
+					"cweid": "0",
+					"wascid": "0",
+					"sourceid": "2308"
+				}
+			]
+		}
+	]
+}

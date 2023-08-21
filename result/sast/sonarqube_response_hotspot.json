@@ -1,0 +1,32 @@
+[
+    {
+        "number": 3,
+        "type": "security_hotspot",
+        "severity": "high",
+        "sonarsource": {
+            "authentication": 11,
+            "cross_site_scripting": 9
+        }
+    },
+    {
+        "number": 4,
+        "type": "security_hotspot",
+        "severity": "medium",
+        "sonarsource": {
+            "denial_of_service": 10,
+            "permission": 1,
+            "code_injection": 2,
+            "weak_cryptography": 11
+        }
+    },
+    {
+        "number": 6,
+        "type": "security_hotspot",
+        "severity": "low",
+        "sonarsource": {
+            "encryption_sensitive_data": 30,
+            "insecure_configuration": 3,
+            "others": 6
+        }
+    }
+]

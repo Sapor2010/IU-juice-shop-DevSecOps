@@ -1,0 +1,53 @@
+[
+    {
+        "number": 1,
+        "type": "vulnerability",
+        "severity": "blocker",
+        "sonarsource": {
+            "sql_injection": 9,
+            "path_traversal_injection": 4,
+            "code_injection": 2,
+            "open_redirect": 1,
+            "cross_site_scripting": 1
+        },
+        "sans_top25": {
+            "insecure_interaction": 4,
+            "risky_ressource_management": 4
+        },
+        "owasp_top10": {
+            "a1_injection": 15,
+            "a5_broken_access_control": 5,
+            "a7_cross_site_scripting": 1
+        },
+        "cwe": {
+            "cwe20_improper_input": 16,
+            "cwe943_data_query": 7,
+            "cwe22_improper_limitation": 4,
+            "cwe89_sql_injection": 2,
+            "cwe95_eval_injection": 2,
+            "cwe601_url_redirection": 1,
+            "cwe79_cross_site_scripting": 1
+        }
+    },
+    {
+        "number": 2,
+        "type": "vulnerability",
+        "severity": "major",
+        "sonarsource": {},
+        "sans_top25": {},
+        "owasp_top10": {},
+        "cwe": {
+            "cwe20_improper_input": 1,
+            "cwe918_server_side_forgery": 1
+        }
+    },
+    {
+        "number": 32,
+        "type": "vulnerability",
+        "severity": "critical",
+        "sonarsource": {},
+        "sans_top25": {},
+        "owasp_top10": {},
+        "cwe": {}
+    }
+]
